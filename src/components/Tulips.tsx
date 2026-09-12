@@ -1,13 +1,16 @@
+import type { CSSProperties } from "react";
+
 type TulipProps = {
   className?: string;
   bloom?: string;
   stem?: string;
+  style?: CSSProperties;
 };
 
 /** Cute hand-drawn style tulip used as decorative artwork. Purely ornamental. */
-export function Tulip({ className, bloom = "currentColor", stem = "currentColor" }: TulipProps) {
+export function Tulip({ className, bloom = "currentColor", stem = "currentColor", style }: TulipProps) {
   return (
-    <svg viewBox="0 0 64 96" className={className} aria-hidden="true" focusable="false">
+    <svg viewBox="0 0 64 96" className={className} style={style} aria-hidden="true" focusable="false">
       <path
         d="M32 6c4 0 7 5 8 10 2-4 6-7 9-6 3 1 3 6 2 11-1 7-6 16-13 20-1 1-2 1-3 0-7-4-12-13-13-20-1-5-1-10 2-11 3-1 7 2 9 6 1-5 4-10 8-10Z"
         fill={bloom}
